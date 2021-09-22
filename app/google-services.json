@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "298632897577",
+    "project_id": "flower-paradise-9a852",
+    "storage_bucket": "flower-paradise-9a852.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298632897577:android:5de9d5ebe4110736b8a838",
+        "android_client_info": {
+          "package_name": "com.example.flowerparadise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298632897577-uttk7a4l7ajsnjjqhv9k5ucc1l54j1re.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCX4tNWfeTUL5CxJVPfH_P_ALobNWpfkbQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "298632897577-uttk7a4l7ajsnjjqhv9k5ucc1l54j1re.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
