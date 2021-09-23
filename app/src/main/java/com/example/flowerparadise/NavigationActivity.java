@@ -63,9 +63,17 @@ public class NavigationActivity extends AppCompatActivity implements NavigationV
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new GiftFragment()).commit();
                 break;
+            case R.id.nav_delivery:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new FragmentDeliveryTrack()).commit();
+                break;
             case R.id.nav_myaccount:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new MyAccountFragment()).commit();
+                break;
+            case R.id.nav_starrate:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new FragmentToReview()).commit();
                 break;
 
         }

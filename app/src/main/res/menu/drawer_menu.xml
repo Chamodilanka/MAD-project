@@ -19,8 +19,14 @@
         <item android:id="@+id/nav_gift"
             android:icon="@drawable/ic_gift"
             android:title="Gifts"/>
+        <item android:id="@+id/nav_delivery"
+            android:icon="@drawable/ic_delivery"
+            android:title="Delivery Track"/>
         <item android:id="@+id/nav_myaccount"
             android:icon="@drawable/ic_myaccount"
             android:title="My Account"/>
+        <item android:id="@+id/nav_starrate"
+            android:icon="@drawable/ic_star_rate"
+            android:title="To review"/>
     </group>
 </menu>

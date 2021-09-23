@@ -2,4 +2,9 @@
     <string name="app_name">Flower Paradise</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="btncakes">Cakes</string>
+    <string name="btnchocolates">Chocolates</string>
+    <string name="btnbdaycards">Birthday Cards</string>
+    <string name="btnteddybears">Teddy Bears</string>
+    <string name="btnmugs">Mugs</string>
 </resources>

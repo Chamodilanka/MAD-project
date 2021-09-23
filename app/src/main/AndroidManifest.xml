@@ -16,7 +16,7 @@
         android:roundIcon="@id/icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.FlowerParadise.NoActionBar">
-        <activity android:name=".NavigationActivity"></activity>
+        <activity android:name=".NavigationActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
