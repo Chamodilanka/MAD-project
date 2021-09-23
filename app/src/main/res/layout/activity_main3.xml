@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/newCart"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".shoppingCart">
+
+    <LinearLayout
+        android:id="@+id/panel"
+        android:background="@color/purple_200"
+        android:orientation="horizontal"
+        android:weightSum="16"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:src="@drawable/ic_baseline_navigate_before_24"
+            android:layout_gravity="start|center_vertical"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/abc"
+            android:text="Shopping Cart"
+            android:layout_gravity="center_vertical"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_weight="11"
+            android:layout_height="wrap_content"/>
+
+
+
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_cart"
+        android:padding="8dp"
+        android:layout_below="@+id/panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/panel2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="1900px"
+        android:background="#D0C8DF"
+        android:orientation="horizontal"
+        android:weightSum="16">
+
+        <TextView
+            android:id="@+id/label"
+            android:text="Total Price:"
+            android:layout_gravity="start|center_vertical"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="50dp"
+            android:layout_width="0dp"
+            android:layout_weight="11"
+            android:layout_height="wrap_content"/>
+
+
+
+        <TextView
+            android:id="@+id/txtTotal"
+            android:text=""
+            android:layout_gravity="center_vertical"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginRight="90dp"
+            android:layout_width="0dp"
+            android:layout_weight="11"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_order"
+        android:layout_width="167dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="650dp"
+        android:layout_marginLeft="120dp"
+        android:text="@string/btn_order"
+        app:backgroundTint="@color/Txt_button"
+
+        />
+
+
+
+
+
+</RelativeLayout>

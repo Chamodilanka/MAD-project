@@ -2,4 +2,20 @@
     <string name="app_name">Flower Paradise</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="btn_flowers">Flowers</string>
+    <string name="btn_cake">Cakes</string>
+    <string name="btn_chocolate">Chocolate</string>
+    <string name="btn_card">Wishing Cards</string>
+    <string name="btn_mug">Mugs</string>
+    <string name="btn_bear">Teddy Bears</string>
+    <string name="btn_gift">Gift Sets</string>
+    <string name="txt_flower1">Felicity</string>
+    <string name="txt_price">Price(per quantity):</string>
+    <string name="txt_total">Sub Total:</string>
+    <string name="btn_order">Place Order</string>
+    <string name="txt_1">Name:</string>
+    <string name="txt_2">Address:</string>
+    <string name="txt_city">District:</string>
+    <string name="txt_4">Primary Contact No:</string>
+    <string name="txt_5">Secondary Contact No:</string>
 </resources>

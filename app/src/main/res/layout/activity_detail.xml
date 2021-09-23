@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".detail">
+
+        <TextView
+            android:id="@+id/txt_topic1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Sender Details"
+            android:textColor="#1C37CC"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.096"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/txt_1"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_topic1" />
+
+        <EditText
+            android:id="@+id/edit_1"
+            android:layout_width="228dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="24dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_1"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="44dp"
+            android:text="@string/txt_2"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_1" />
+
+        <EditText
+            android:id="@+id/edit_2"
+            android:layout_width="228dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="24dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_2"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="48dp"
+            android:text="@string/txt_city"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_2" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dropdown1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="225dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/edit_2"
+            tools:ignore="MissingConstraints">
+
+            <AutoCompleteTextView
+                android:id="@+id/act_dropdown1"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:background="@null"
+                android:hint="District"
+                android:padding="20dp">
+
+            </AutoCompleteTextView>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/txt_4"
+            android:layout_width="118dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="44dp"
+            android:text="@string/txt_4"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="221dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="24dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_4"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_5"
+            android:layout_width="111dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/txt_5"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_4" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName3"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.549"
+            app:layout_constraintStart_toEndOf="@+id/txt_5"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+
+        <TextView
+            android:id="@+id/txt_detail2"
+            android:layout_width="162dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="Receiver Details"
+            android:textColor="#1C37CC"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_5" />
+
+        <TextView
+            android:id="@+id/txt_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/txt_1"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_detail2" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName4"
+            android:layout_width="233dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.205"
+            app:layout_constraintStart_toEndOf="@+id/txt_7"
+            app:layout_constraintTop_toBottomOf="@+id/txt_detail2" />
+
+        <TextView
+            android:id="@+id/txt_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/txt_2"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_7" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName5"
+            android:layout_width="233dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.297"
+            app:layout_constraintStart_toEndOf="@+id/txt_8"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+
+        <TextView
+            android:id="@+id/txt_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/txt_city"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_8" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dropdown2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="225dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/txt_9"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5"
+            tools:ignore="MissingConstraints">
+
+            <AutoCompleteTextView
+                android:id="@+id/act_dropdown2"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:background="@null"
+                android:hint="District"
+                android:padding="20dp">
+
+            </AutoCompleteTextView>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/txt_10"
+            android:layout_width="117dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/txt_4"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_9" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName6"
+            android:layout_width="228dp"
+            android:layout_height="49dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.461"
+            app:layout_constraintStart_toEndOf="@+id/txt_10" />
+
+
+        <TextView
+            android:id="@+id/txt_11"
+            android:layout_width="117dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="36dp"
+            android:text="Email:"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_10" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName7"
+            android:layout_width="228dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.461"
+            app:layout_constraintStart_toEndOf="@+id/txt_10"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+
+        <TextView
+            android:id="@+id/txt_12"
+            android:layout_width="117dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="36dp"
+            android:text="Delivery Date:"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_11" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName8"
+            android:layout_width="228dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:inputType="date"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txt_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.461"
+            app:layout_constraintStart_toEndOf="@+id/txt_10"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="167dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="4dp"
+            android:text="Same As Receiver"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName4"
+            app:layout_constraintStart_toEndOf="@+id/txt_detail2" />
+
+        <Button
+            android:id="@+id/btn_next1"
+            android:layout_width="60dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="320dp"
+            android:layout_marginTop="16dp"
+            android:text=">>"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#464646"
+            app:backgroundTint="#b2beb5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8" />
+
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="145dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="80dp"
+            android:text="Submit"
+            app:backgroundTint="@color/Txt_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.261"
+            app:layout_constraintBaseline_toBaselineOf="@+id/btn_next1"
+            app:layout_constraintTop_toBottomOf="@+id/txt_12" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
