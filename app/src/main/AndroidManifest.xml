@@ -3,7 +3,6 @@
     package="com.example.flowerparadise"
     android:installLocation="auto">
 
-
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -17,8 +16,12 @@
         android:roundIcon="@id/icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.FlowerParadise.NoActionBar">
-        <activity android:name=".NavigationActivity"></activity>
-        <activity android:name=".CakeCart"></activity>
+        <activity android:name=".TeddyCart"></activity>
+        <activity android:name=".MugCart" />
+        <activity android:name=".CardCart" />
+        <activity android:name=".ChocolateCart" />
+        <activity android:name=".NavigationActivity" />
+        <activity android:name=".CakeCart" />
         <activity android:name=".shoppingCart" />
         <activity android:name=".NewCart" />
         <activity android:name=".prepayments" />
