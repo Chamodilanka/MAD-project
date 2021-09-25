@@ -7,4 +7,7 @@
     <string name="btnbdaycards">Birthday Cards</string>
     <string name="btnteddybears">Teddy Bears</string>
     <string name="btnmugs">Mugs</string>
+    <string name="txtDeliverTrack">Deliver Track</string>
+    <string name="btndelivercharge">Delivery Charge</string>
+    <string name="btndeliverdetails">Deliver Details</string>
 </resources>

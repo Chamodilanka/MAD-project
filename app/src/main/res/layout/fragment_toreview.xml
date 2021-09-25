@@ -2,13 +2,25 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:background="@color/purple_200">
 
-    <TextView
+
+    <pl.droidsonroids.gif.GifImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="To review Fragment"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"/>
+        android:src="@drawable/tinkerbell"
+        />
 
+    <Button
+        android:id="@+id/btn_feedback"
+        android:layout_width="222dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="141dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="146dp"
+        android:text="Give us your kind feedback"
+        android:textSize="20sp" />
 </RelativeLayout>

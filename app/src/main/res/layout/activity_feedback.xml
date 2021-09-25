@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple1"
+    android:orientation="vertical"
+    tools:context=".feedbackActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Rate Us"
+        android:textColor="#F6ECF8"
+        android:textSize="40dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/giftreview" />
+
+    <TextView
+        android:id="@+id/txtaskfeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What do you think about our service?"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtaskfeedback2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please give us your feedback and Rate us"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/txtaskname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_PersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter your name here"
+        android:inputType="textPersonName"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/txtfeedbckname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your feedback"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Give your feedback here"
+        android:inputType="textPersonName"
+        android:maxLines="5" />
+
+    <Button
+        android:id="@+id/btnsubmitfeedback"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:width="10dp"
+        android:maxWidth="100dip"
+        android:text="Submit" />
+
+    <TextView
+        android:id="@+id/txtaskrate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your rate about our service"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/txtfeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Very Dissatisfied"
+        android:textColor="#FFC107"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <RatingBar
+            android:id="@+id/rb_stars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#673AB7"
+            android:numStars="5" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
