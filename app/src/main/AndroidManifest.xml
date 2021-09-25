@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.flowerparadise"
     android:installLocation="auto">
 
@@ -16,7 +17,7 @@
         android:roundIcon="@id/icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.FlowerParadise.NoActionBar">
-        <activity android:name=".TeddyCart"></activity>
+        <activity android:name=".TeddyCart" />
         <activity android:name=".MugCart" />
         <activity android:name=".CardCart" />
         <activity android:name=".ChocolateCart" />

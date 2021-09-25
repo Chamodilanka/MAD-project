@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -14,6 +16,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 import com.example.flowerparadise.model.Customer_details;
 import com.google.android.material.textfield.TextInputLayout;
@@ -26,11 +29,12 @@ public class detail extends AppCompatActivity {
     AutoCompleteTextView senderdistrict,receiverdistrict;
     Button btnSubmit;
 
+
     DatabaseReference reference;
     Customer_details customer_details;
 
 
-    private Button button;
+
     TextInputLayout  til_dropdown1;
     AutoCompleteTextView act_dropdown1;
     TextInputLayout  til_dropdown2;
@@ -50,14 +54,9 @@ public class detail extends AppCompatActivity {
         detail2.setPaintFlags(detail.getPaintFlags()| Paint.UNDERLINE_TEXT_FLAG);
 
 
-        button=(Button) findViewById(R.id.btn_next1);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(detail.this,Payment.class);
-                startActivity(intent);
-            }
-        });
+
+
+
 
         til_dropdown1=(TextInputLayout) findViewById(R.id.dropdown1);
         act_dropdown1=(AutoCompleteTextView) findViewById(R.id.act_dropdown1);
@@ -115,6 +114,7 @@ public class detail extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 int senderprim=Integer.parseInt(senderprimarycontact.getText().toString().trim());
                 int sendersecon=Integer.parseInt(sendersecondarycontact.getText().toString().trim());
                 int receiverprim=Integer.parseInt(receiverprimarycontact.getText().toString().trim());
@@ -132,12 +132,93 @@ public class detail extends AppCompatActivity {
                 customer_details.setSender_PrimaryConatct(senderprim);
                 customer_details.setSender_SecondaryConatct(sendersecon);
 
-                reference.push().setValue(customer_details);
-                Toast.makeText(detail.this,"data inserted successfully",Toast.LENGTH_LONG).show();
+
+                String name=sendername.getText().toString();
+                String email=receiveremail.getText().toString();
+                String rname=receivername.getText().toString();
+                String saddress=senderaddress.getText().toString();
+                String raddress=receiveraddress.getText().toString();
+                String date=receiverdeilverydate.getText().toString();
 
 
+
+                boolean check=validateinfo(name,email,rname,saddress,raddress,date);
+
+                if(check==true){
+                    Intent intent= new Intent(detail.this,Payment.class);
+                    startActivity(intent);
+                    reference.push().setValue(customer_details);
+                    Toast.makeText(getApplicationContext(),"Data Inserted Successfully",Toast.LENGTH_LONG).show();
+                }
+                else{
+                    Toast.makeText(getApplicationContext(),"Sorry Check the information again",Toast.LENGTH_LONG).show();
+                }
             }
+
+
         });
     }
+
+     private Boolean validateinfo(String name,String email,String rname,String saddress,String raddress,String date){
+        if(name.length()==0){
+            sendername.requestFocus();
+            sendername.setError("Field cannot be empty");
+            return false;
+        }
+        else if(!name.matches("[a-zA-Z]+")){
+            sendername.requestFocus();
+            sendername.setError("Enter only alphabetical characters");
+            return false;
+
+        }
+
+        else if(!email.matches("[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+")){
+            receiveremail.requestFocus();
+            receiveremail.setError("Enter valid email");
+            return false;
+
+        }
+
+         else if(!rname.matches("[a-zA-Z]+")){
+             receivername.requestFocus();
+             receivername.setError("Enter only alphabetical characters");
+             return false;
+         }
+         else if(saddress.length()==0){
+             senderaddress.requestFocus();
+             senderaddress.setError("Field cannot be empty");
+             return false;
+         }
+         else if(raddress.length()==0){
+             receiveraddress.requestFocus();
+             receiveraddress.setError("Field cannot be empty");
+             return false;
+         }
+        else if(raddress.length()==0){
+           receiveraddress.requestFocus();
+            receiveraddress.setError("Field cannot be empty");
+            return false;
+        }
+        else if(date.length()==0){
+            receiverdeilverydate.requestFocus();
+            receiverdeilverydate.setError("Field cannot be empty");
+            return false;
+        }
+        else if(!date.matches("[0-9]{1,2}+/+[0-9]{1,2}+/+[0-9]{4}+")){
+            receiverdeilverydate.requestFocus();
+            receiverdeilverydate.setError("Invalid date format");
+            return false;
+
+         }
+
+
+        else{
+            return true;
+        }
+
+     }
+
+
+
 
 }

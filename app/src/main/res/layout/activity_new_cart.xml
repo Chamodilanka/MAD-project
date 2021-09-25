@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="11"
-            android:text="Flower and Gift Shop"
+            android:text="Flowers"
             android:textSize="25sp"
             android:textStyle="bold" />
 

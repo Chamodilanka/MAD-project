@@ -28,7 +28,7 @@ public class Payment extends AppCompatActivity {
     EditText Name,CardNo,ExpDate,PinNo;
     DatabaseReference reference;
     PaymentModel paymentModel;
-    ImageButton next;
+
 
 
 
@@ -41,14 +41,6 @@ public class Payment extends AppCompatActivity {
 
         TextView detail=(TextView) findViewById(R.id.txt_payment);
         detail.setPaintFlags(detail.getPaintFlags()| Paint.UNDERLINE_TEXT_FLAG);
-        next=(ImageButton) findViewById(R.id.imageButton);
-        next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(Payment.this, prepayments.class);
-                startActivity(intent);
-            }
-        });
 
         Name=(EditText)findViewById(R.id.editTextTextPersonName11);
         CardNo=(EditText)findViewById(R.id.editTextTextPersonName);
@@ -70,13 +62,52 @@ public class Payment extends AppCompatActivity {
                 paymentModel.setExpdate(ExpDate.getText().toString().trim());
                 paymentModel.setPinno(pinno);
 
-                reference.push().setValue(paymentModel);
-                Toast.makeText(Payment.this,"order placed successfully",Toast.LENGTH_LONG).show();
+                String name=Name.getText().toString();
+                String expdate=ExpDate.getText().toString();
+
+
+                boolean check=validateinfo(name,expdate);
+                if(check == true){
+                    Intent intent= new Intent(Payment.this, prepayments.class);
+                    startActivity(intent);
+                    reference.push().setValue(paymentModel);
+                    Toast.makeText(Payment.this,"order placed successfully",Toast.LENGTH_LONG).show();
+
+                }
+                else{
+                    Toast.makeText(getApplicationContext(),"Sorry Check the information again",Toast.LENGTH_LONG).show();
+
+                }
 
             }
         });
 
+    }
 
+    private Boolean validateinfo(String name,String expdate) {
+        if (name.length() == 0) {
+            Name.requestFocus();
+            Name.setError("Field cannot be empty");
+            return false;
+        } else if (!name.matches("[a-zA-Z]+")) {
+            Name.requestFocus();
+            Name.setError("Enter only alphabetical characters");
+            return false;
 
+        }
+       else if (expdate.length() == 0) {
+            ExpDate.requestFocus();
+            ExpDate.setError("Field cannot be empty");
+            return false;
+        } else if (!expdate.matches("[0-9]{1,2}+/+[0-9]{2}+")) {
+            ExpDate.requestFocus();
+            ExpDate.setError("Invalid Date Format");
+            return false;
+
+        }
+
+        else{
+            return true;
+        }
     }
 }

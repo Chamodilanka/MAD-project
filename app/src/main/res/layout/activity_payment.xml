@@ -141,7 +141,7 @@
         android:layout_height="41dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="24dp"
-        android:text="Card Expiration Date:"
+        android:text="Card Expiration Date(MM/YY):"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -186,11 +186,10 @@
         android:id="@+id/button"
         android:layout_width="145dp"
         android:layout_height="49dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="72dp"
         android:text="Pay Now"
         app:backgroundTint="@color/Txt_button"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
-        app:layout_constraintHorizontal_bias="0.731"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName10" />
 
@@ -228,16 +227,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.264"
         app:layout_constraintStart_toEndOf="@+id/textView" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="44dp"
-        android:layout_height="39dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="28dp"
-        android:src="@drawable/ic_baseline_double_arrow_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

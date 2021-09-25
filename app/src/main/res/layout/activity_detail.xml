@@ -179,11 +179,11 @@
             android:layout_width="233dp"
             android:layout_height="40dp"
             android:layout_marginStart="68dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="16dp"
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.205"
+            app:layout_constraintHorizontal_bias="0.304"
             app:layout_constraintStart_toEndOf="@+id/txt_7"
             app:layout_constraintTop_toBottomOf="@+id/txt_detail2" />
 
@@ -200,10 +200,10 @@
 
         <EditText
             android:id="@+id/editTextTextPersonName5"
-            android:layout_width="233dp"
-            android:layout_height="35dp"
+            android:layout_width="230dp"
+            android:layout_height="37dp"
             android:layout_marginStart="52dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
@@ -294,10 +294,10 @@
         <TextView
             android:id="@+id/txt_12"
             android:layout_width="117dp"
-            android:layout_height="47dp"
+            android:layout_height="58dp"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="36dp"
-            android:text="Delivery Date:"
+            android:layout_marginTop="25dp"
+            android:text="Delivery Date(DD/MM/YYYY):"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_11" />
@@ -325,20 +325,6 @@
             app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName4"
             app:layout_constraintStart_toEndOf="@+id/txt_detail2" />
 
-        <Button
-            android:id="@+id/btn_next1"
-            android:layout_width="60dp"
-            android:layout_height="49dp"
-            android:layout_marginStart="320dp"
-            android:layout_marginTop="16dp"
-            android:text=">>"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:textColor="#464646"
-            app:backgroundTint="#b2beb5"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8" />
 
 
         <Button
@@ -352,7 +338,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.261"
-            app:layout_constraintBaseline_toBaselineOf="@+id/btn_next1"
             app:layout_constraintTop_toBottomOf="@+id/txt_12" />
 
 

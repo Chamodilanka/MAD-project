@@ -6,6 +6,27 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".CartFragment">
+    <LinearLayout
+        android:background="@color/purple_200"
+        android:id="@+id/panel"
+        android:orientation="horizontal"
+        android:weightSum="16"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:id="@+id/title"
+            android:text="Flower and Gift Shop"
+            android:layout_gravity="center"
+            android:layout_marginLeft="60px"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_weight="11"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_flowers"
