@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+//this is the cart fragment
 
 public class CartFragment extends Fragment {
     @Nullable
