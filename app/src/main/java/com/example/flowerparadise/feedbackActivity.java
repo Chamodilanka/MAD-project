@@ -32,7 +32,7 @@ public class feedbackActivity extends AppCompatActivity {
         tvFeedback = findViewById(R.id.txtfeedback);
         rbStars = findViewById(R.id.rb_stars);
 
-        feedbackDB = FirebaseDatabase.getInstance().getReference().child("feedback");
+        feedbackDB = FirebaseDatabase.getInstance().getReference().child("feedbacks");
         btnsubmitfeedback.setOnClickListener(new View.OnClickListener(){
 
             @Override

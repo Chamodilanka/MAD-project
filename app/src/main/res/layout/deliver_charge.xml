@@ -1,36 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/distancefrdestination"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bgcharge"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="16dp"
-    android:gravity="center_horizontal"
     tools:context=".DeliverChargeActivity">
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/et_source"
-        android:hint="Enter source location"
-        android:padding="12dp"
-        android:background="@color/purple_200"
-        />
-    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:hint="Enter source location"
+        android:padding="12dp" />
+
+    <EditText
         android:id="@+id/et_destination"
-        android:hint="Enter Destination Location"
-        android:padding="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@color/purple_200"
+        android:hint="Enter Destination Location"
+        android:padding="12dp" />
+
+    <Button
+        android:id="@+id/btn_track"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Display track" />
+
+    <TextView
+        android:id="@+id/txt_askseedistance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Click Here! See the distance with your destination location.."
+        android:textColor="#1A39EA"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_telltocalc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#97D0EA"
+        android:text="Now you can see how much does we charge for you delivery.."
+        android:textColor="#3F51B5"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_blank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+
+        />
+
+    <TextView
+        android:id="@+id/txt_tellperkm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00BCD4"
+        android:text="We charge Rs.50 for per 1km"
+        android:textColor="#3F51B5"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/blank2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/blank3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_deliverchargepr1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:ems="10"
+        android:hint="Enter charge per 1km that we have shown you"
+        android:inputType="number"
+        android:padding="12dp"/>
+
+    <TextView
+        android:id="@+id/blank4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <EditText
+        android:id="@+id/et_distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Enter distance(km)"
+        android:padding="12dp"/>
+
+    <TextView
+        android:id="@+id/blank5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <EditText
+        android:id="@+id/resultcharge"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:background="#A073EF"
+        android:ems="10"
+        android:hint="Deliver charge"
+        android:inputType="number"
+        android:padding="12dp"
+        android:textColorLink="#35EFDE" />
+
+    <TextView
+        android:id="@+id/blank6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         />
 
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/btnMultiply"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_track"
-        android:text="Display track"
-        android:layout_marginTop="16dp"/>
+        android:text="Show Charge" />
+
 </LinearLayout>

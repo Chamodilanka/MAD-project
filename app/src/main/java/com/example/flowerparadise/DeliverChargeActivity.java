@@ -13,6 +13,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class DeliverChargeActivity extends AppCompatActivity {
     //Initialize variables
+
+    private Button Multiply;
+    private EditText Num1;
+    private EditText Num2;
+    private EditText Result;
+
     EditText etSource,etDestination;
     Button btTrack;
 
@@ -25,6 +31,22 @@ public class DeliverChargeActivity extends AppCompatActivity {
         etSource = findViewById(R.id.et_source);
         etDestination = findViewById(R.id.et_destination);
         btTrack = findViewById(R.id.btn_track);
+
+        Multiply = findViewById(R.id.btnMultiply);
+        Num1 = findViewById(R.id.et_deliverchargepr1);
+        Num2 = findViewById(R.id.et_distance);
+        Result = findViewById(R.id.resultcharge);
+
+        Multiply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                double a,b,c;
+                a = Double.parseDouble(Num1.getText().toString());
+                b = Double.parseDouble(Num2.getText().toString());
+                c = a * b;
+                Result.setText(Double.toString(c));
+            }
+        });
 
         btTrack.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -43,12 +65,8 @@ public class DeliverChargeActivity extends AppCompatActivity {
                     //Display Track
                     DisplayTrack(sSource,sDestination);
                 }
-
             }
-
-
         });
-
     }
 
     private void DisplayTrack(String sSource, String sDestination) {
