@@ -16,7 +16,8 @@
         android:roundIcon="@id/icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.FlowerParadise.NoActionBar">
-        <activity android:name=".DeliverChargeActivity"></activity>
+        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".DeliverChargeActivity" />
         <activity android:name=".CakesActivity" />
         <activity android:name=".feedbackActivity" />
         <activity android:name=".NavigationActivity" />
