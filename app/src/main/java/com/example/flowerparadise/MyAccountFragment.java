@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.navigation.NavigationView;
 
+//Update my account fragment
 public class MyAccountFragment extends Fragment  {
     @Nullable
     @Override

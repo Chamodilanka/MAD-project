@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+//Updated the home fragment
 public class HomeFragment extends Fragment {
     @Nullable
     @Override
