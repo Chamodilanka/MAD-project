@@ -76,7 +76,7 @@ public class feedbackActivity extends AppCompatActivity {
 
         FeedbackData feedbackData = new FeedbackData(name, feedback);
 
-        feedbackDB.push().setValue(feedback);
+        feedbackDB.push().setValue(feedbackData);
         Toast.makeText(feedbackActivity.this, "Data inserted", Toast.LENGTH_SHORT).show();
 
     }

@@ -16,7 +16,9 @@
         android:roundIcon="@id/icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.FlowerParadise.NoActionBar">
-        <activity android:name=".feedbackActivity"></activity>
+        <activity android:name=".DeliverChargeActivity"></activity>
+        <activity android:name=".CakesActivity" />
+        <activity android:name=".feedbackActivity" />
         <activity android:name=".NavigationActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>

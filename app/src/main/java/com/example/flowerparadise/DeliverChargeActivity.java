@@ -25,7 +25,7 @@ public class DeliverChargeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.deliver_charge);
+        setContentView(R.layout.activity_deliver_charge);
 
         //Asign variable
         etSource = findViewById(R.id.et_source);
@@ -59,7 +59,7 @@ public class DeliverChargeActivity extends AppCompatActivity {
                 if(sSource.equals("")&& sDestination.equals("")){
                     //When both value blank
                     Toast.makeText(getApplicationContext()
-                    ,"Enter both location",Toast.LENGTH_SHORT).show();
+                            ,"Enter both location",Toast.LENGTH_SHORT).show();
                 }else{
                     //When both values fill
                     //Display Track
@@ -75,7 +75,7 @@ public class DeliverChargeActivity extends AppCompatActivity {
             //When google map installed
             //Initialize uri
             Uri uri = Uri.parse("https://www.google.co.in/maps/dir/" + sSource + "/"
-            + sDestination);
+                    + sDestination);
             //Initialize intent with action view
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             //Set package
@@ -96,5 +96,5 @@ public class DeliverChargeActivity extends AppCompatActivity {
             //start activity
             startActivity(intent);
         }
-        }
     }
+}
